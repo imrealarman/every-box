@@ -20,6 +20,16 @@
     "iconPath": "Assets/AppIcon.png"
   },
   {
+    "id": "every-printer",
+    "name": "Every Printer",
+    "repo": "imrealarman/every-printer",
+    "tagline": "Preview, arrange and print documents: booklets, posters, N-up, watermarks.",
+    "category": "Documents",
+    "uninstallId": "B4E7C2D1-6A3F-4D58-9C0B-2F81E5A7D3C6",
+    "exe": "EveryPrinter.exe",
+    "iconPath": "Assets/AppIcon.png"
+  },
+  {
     "id": "every-search",
     "name": "EverySearch",
     "repo": "imrealarman/every-search",
