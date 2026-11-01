@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="EveryStore.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Padding="24,4,24,32" Spacing="22" MaxWidth="640" HorizontalAlignment="Left">
+            <TextBlock Text="Settings" Style="{StaticResource TitleText}" FontSize="26" />
+
+            <StackPanel Spacing="8">
+                <TextBlock Text="THEME" Style="{StaticResource PanelHeader}" />
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <Button x:Name="ThemeSystem" Content="System" Tag="system" Click="Theme_Click" />
+                    <Button x:Name="ThemeLight" Content="Light" Tag="light" Click="Theme_Click" />
+                    <Button x:Name="ThemeDark" Content="Dark" Tag="dark" Click="Theme_Click" />
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Spacing="8">
+                <TextBlock Text="UPDATES" Style="{StaticResource PanelHeader}" />
+                <ToggleSwitch x:Name="AutoCheckSwitch" Header="Check for updates automatically" OnContent="On" OffContent="Off" Toggled="AutoCheck_Toggled" />
+                <ToggleSwitch x:Name="AutoUpdateSwitch" Header="Install updates automatically" OnContent="On" OffContent="Off" Toggled="AutoUpdate_Toggled" />
+                <TextBlock Style="{StaticResource MutedText}" TextWrapping="Wrap"
+                           Text="Checks when the store opens and then on the schedule below while it stays open. Automatic installs never close an app you are using; they wait until you close it." />
+                <StackPanel x:Name="IntervalRow" Orientation="Horizontal" Spacing="8">
+                    <Button x:Name="Every1" Content="Every hour" Tag="1" Click="Interval_Click" />
+                    <Button x:Name="Every6" Content="Every 6 hours" Tag="6" Click="Interval_Click" />
+                    <Button x:Name="Every24" Content="Every day" Tag="24" Click="Interval_Click" />
+                </StackPanel>
+                <Button Style="{StaticResource SecondaryButton}" Content="Check now" HorizontalAlignment="Left" Click="CheckNow_Click" />
+                <TextBlock x:Name="CheckStatus" Style="{StaticResource MutedText}" />
+            </StackPanel>
+
+            <StackPanel Spacing="8">
+                <TextBlock Text="GITHUB TOKEN (OPTIONAL)" Style="{StaticResource PanelHeader}" />
+                <TextBlock TextWrapping="Wrap" Style="{StaticResource MutedText}"
+                           Text="Without a token GitHub allows 60 requests an hour, plenty for browsing. A token raises that to 5,000 and lets the store post bug reports and feedback directly. Create a fine-grained token with Issues: read and write on the apps' repositories. It is stored encrypted for your Windows account only." />
+                <PasswordBox x:Name="TokenBox" PlaceholderText="github_pat_…" />
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <Button Style="{StaticResource PrimaryButton}" Content="Save token" Click="SaveToken_Click" />
+                    <Button Style="{StaticResource SecondaryButton}" Content="Remove" Click="RemoveToken_Click" />
+                </StackPanel>
+                <TextBlock x:Name="TokenStatus" Style="{StaticResource MutedText}" TextWrapping="Wrap" />
+            </StackPanel>
+
+            <StackPanel Spacing="8">
+                <TextBlock Text="STORAGE" Style="{StaticResource PanelHeader}" />
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <Button Style="{StaticResource SecondaryButton}" Content="Clear saved data" Click="ClearCache_Click" />
+                    <Button Style="{StaticResource SecondaryButton}" Content="Open Downloads" Click="OpenDownloads_Click" />
+                </StackPanel>
+                <TextBlock x:Name="StorageStatus" Style="{StaticResource MutedText}" />
+            </StackPanel>
+
+            <StackPanel Spacing="4">
+                <TextBlock Text="ABOUT" Style="{StaticResource PanelHeader}" />
+                <TextBlock x:Name="AboutText" FontSize="12" />
+                <TextBlock Style="{StaticResource MutedText}" TextWrapping="Wrap"
+                           Text="To list another app, add it to %AppData%\EveryStore\catalog.json using the same fields as the catalog.json next to the exe." />
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

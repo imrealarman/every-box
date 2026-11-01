@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>EveryStore.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- The logic is plain .NET, so the tests compile the real source files instead of referencing the WinUI app. -->
+    <Compile Include="..\..\Services\Versions.cs" Link="Logic\Versions.cs" />
+    <Compile Include="..\..\Services\TimeText.cs" Link="Logic\TimeText.cs" />
+    <Compile Include="..\..\Services\Installer.cs" Link="Logic\Installer.cs" />
+    <Compile Include="..\..\Services\Reports.cs" Link="Logic\Reports.cs" />
+    <Compile Include="..\..\Models\GitHubModels.cs" Link="Logic\GitHubModels.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+</Project>

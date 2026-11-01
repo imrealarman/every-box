@@ -1,0 +1,42 @@
+[
+  {
+    "id": "every-copy",
+    "name": "EveryCopy",
+    "repo": "imrealarman/every-copy",
+    "tagline": "A fast, safe file copier and mover with a queue, live speed and byte-for-byte verify.",
+    "category": "Files",
+    "uninstallId": "6A1F3C52-9D47-4B8E-A2C0-5E7B14D93F68",
+    "exe": "EveryCopy.exe",
+    "iconPath": "Assets/AppIcon.png"
+  },
+  {
+    "id": "every-scanner",
+    "name": "Every Scanner",
+    "repo": "imrealarman/every-scanner",
+    "tagline": "Scan documents into clean, searchable PDFs.",
+    "category": "Documents",
+    "uninstallId": "8F3B2D6A-5C1E-4B7A-9E24-6A1D0C7F3B58",
+    "exe": "SScanner.exe",
+    "iconPath": "Assets/AppIcon.png"
+  },
+  {
+    "id": "every-search",
+    "name": "EverySearch",
+    "repo": "imrealarman/every-search",
+    "tagline": "Instant file and folder search for Windows.",
+    "category": "Files",
+    "uninstallId": "2D9E6B14-7A3C-4F58-B1D2-9C4E0A6F8E37",
+    "exe": "EverySearch.exe",
+    "iconPath": "Assets/AppIcon.png"
+  },
+  {
+    "id": "every-proxy",
+    "name": "Every Proxy",
+    "repo": "imrealarman/every-proxy",
+    "tagline": "Chrome and Edge extension for VLESS, VMess, Trojan and Shadowsocks servers.",
+    "category": "Network",
+    "kind": "extension",
+    "iconPath": "extension/icons/128.png",
+    "note": "Every Proxy is a browser extension that needs a one-time manual setup, so it can't be installed from here yet. Open the repository for the install steps."
+  }
+]
