@@ -40,6 +40,16 @@
     "iconPath": "Assets/AppIcon.png"
   },
   {
+    "id": "every-download",
+    "name": "EveryDownload",
+    "repo": "imrealarman/every-download",
+    "tagline": "A fast download manager: Smart Boost connections, browser video grabber, scheduler and torrents.",
+    "category": "Network",
+    "uninstallId": "B3E8D1A4-52C7-4F09-9A6B-1D4E7C20F835",
+    "exe": "EveryDownload.exe",
+    "iconPath": "Assets/AppIcon.png"
+  },
+  {
     "id": "every-proxy",
     "name": "Every Proxy",
     "repo": "imrealarman/every-proxy",
