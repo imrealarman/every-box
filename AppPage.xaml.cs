@@ -195,13 +195,34 @@ public sealed partial class AppPage : UserControl
         {
             var md = await shell.Model.Github.GetReadmeAsync(entry.App.Repo, false);
             target.Children.Clear();
-            target.Children.Add(MarkdownView.Build(md ?? entry.Tagline));
+            target.Children.Add(MarkdownView.Build(md is null ? entry.Tagline : UserFacing(md)));
         }
         catch (GitHubException ex)
         {
             target.Children.Clear();
             target.Children.Add(new TextBlock { Text = entry.Tagline + "\n\n" + ex.Message, TextWrapping = TextWrapping.Wrap });
         }
+    }
+
+    private static readonly string[] TechnicalHeadings = ["build", "requirements", "tests", "testing", "project layout", "stack", "tech", "architecture", "development", "contributing"];
+
+    /// <summary>Drops the README sections that are for people building the app (build steps, stack, layout), which don't belong in a store page.</summary>
+    private static string UserFacing(string markdown)
+    {
+        var kept = new List<string>();
+        var skipping = false;
+        var fence = false;
+        foreach (var line in markdown.Split('\n'))
+        {
+            if (line.TrimStart().StartsWith("```")) fence = !fence;
+            if (!fence && line.StartsWith("## "))
+            {
+                var heading = line[3..].Trim().ToLowerInvariant();
+                skipping = TechnicalHeadings.Any(heading.StartsWith);
+            }
+            if (!skipping) kept.Add(line);
+        }
+        return string.Join('\n', kept);
     }
 
     private void BuildWhatsNew()
