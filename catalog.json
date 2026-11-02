@@ -50,6 +50,16 @@
     "iconPath": "Assets/AppIcon.png"
   },
   {
+    "id": "every-dns",
+    "name": "EveryDns",
+    "repo": "imrealarman/every-dns",
+    "tagline": "DNS manager and proxy client: test, change and clear DNS; VLESS, VMess, Trojan and Shadowsocks.",
+    "category": "Network",
+    "uninstallId": "C7A41E9B-3D52-4F86-8B0A-6E2D91F5A374",
+    "exe": "EveryDns.exe",
+    "iconPath": "Assets/AppIcon.png"
+  },
+  {
     "id": "every-proxy",
     "name": "Every Proxy",
     "repo": "imrealarman/every-proxy",
