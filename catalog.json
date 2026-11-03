@@ -60,6 +60,16 @@
     "iconPath": "Assets/AppIcon.png"
   },
   {
+    "id": "every-share",
+    "name": "Every Share",
+    "repo": "imrealarman/every-share",
+    "tagline": "Send files between PCs and phones over Wi-Fi, hotspot or Bluetooth, with QR codes and file requests.",
+    "category": "Network",
+    "uninstallId": "D58963BB-D92B-44FC-BA69-4B5D9FBBEAD1",
+    "exe": "EveryShare.exe",
+    "iconPath": "Assets/AppIcon.png"
+  },
+  {
     "id": "every-proxy",
     "name": "Every Proxy",
     "repo": "imrealarman/every-proxy",
