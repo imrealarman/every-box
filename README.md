@@ -41,4 +41,4 @@ powershell -ExecutionPolicy Bypass -File build-installer.ps1   # EveryStore-Setu
 dotnet test tests\EveryStore.Tests
 ```
 
-To publish the store itself, attach `installer\Output\EveryStore-Setup-1.0.1.exe` to a GitHub release of this repository.
+To publish the store itself, attach `installer\Output\EveryStore-Setup-1.0.2.exe` to a GitHub release of this repository.
